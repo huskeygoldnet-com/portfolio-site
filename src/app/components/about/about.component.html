@@ -1,48 +1,111 @@
 <div class="container">
   <main class="about-main">
-    <h1>About me</h1>
-    <h2>I'm a web developer, based in Brooklyn, NY.</h2>
-    <section class="about-section-one">
-      <p>I currently work as a naval architect and marine engineer in New York City, but am transitioning into the field of
-        web development.
-      </p>
-      <p>In September 2017, I began a full-stack intensive course at CUNY City Tech, where I began my my studies in web developement.
-        HTML5, CSS3, Javascript, PHP, MySQL, and some other web tech goodies (jQuery, Bootstrap4, git). </p>
-      <p>During that course, I hit the ground running, creating numerous projects that tested my new found knowledge:</p>
-      <ul class="about-subsection">
-        <li>I developed an application for roommates who wish to keep track of chores, household purchases, and potential guests
-          that may come to visit. (PHP, MySQL, jQuery, AJAX, Bootstrap4).
-          <a href="#">See Roomies</a>
-        </li>
-        <li>I created a mockup of a non-profit site that included Bootstrap features (modals, carousels, accordians).
-          <a href="#">See NYJTL</a>
-        </li>
-        <li>A collection of small vanilla javascript apps that implement new ES6 features.
-          <a href="#">See Bayground</a>
-        </li>
-      </ul>
-      <p>In March, I decided to keep up with the more emerging web technologies and took an intermediate front-end course at
-        NYU.
-      </p>
-      <p>Here, I was introduced to NodeJS, NPM, Webpack, Express, MongoDB, Angular and React.</p>
-      <a href="">Read More</a>
-    </section>
-    <section class="about-section-two">
-      <p>After learning all of these techs, I was a bit overwhelmed and felt much like the person in
-        <a href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f"
-          target="_blank">this</a> article.</p>
-      <p>But I was determined to learn, and again, felt that projects were the best way to dive in.</p>
-      <ul class="about-subsection">
-        <li>I developed travel application that will keep track of your desired destinations and associated costs you may incur. 
-          <a href="#">See Travel-App</a>
-        </li>
-        <li>A weather application that retreives real-time weather data for any city/country from the OpenWeatherMap API.
-          <a href="#">See Weather-App</a>
-        </li>
-        <li>I am currently working on an app that will help students manage their student loans, allowing them to view the effects of interest and their monthly payments on all of their loans with a friendly UX/UI dashboard. I also plan to use D3js to create pretty graphs and visuals for them.
-        </li>
-      </ul>
-    </section>
+    <div class="canvas-container" (window:resize)="onResize($event)">
+    </div>
+
+
+    <div class="row">
+
+
+      <div class="column-2">
+        <h1>Greetings!</h1>
+        <h2>Hi, I'm Zach. I'm a web developer, based in Brooklyn, NY.</h2>
+        <img class="me-image" src="../../../assets/images/photo-me.png" alt="">
+        <section class="about-section-one">
+          <h3>Background</h3>
+          <p>I currently work as a naval architect and marine engineer in New York City, but am transitioning into the field
+            of web development.
+          </p>
+          <p>In September 2017, I began a full-stack intensive course at CUNY City Tech, where I began my studies in web developement:
+            HTML5, CSS3, Javascript, PHP, MySQL, and some other web tech goodies (jQuery, Bootstrap4, git).
+          </p>
+          <p>After creating numerous projects, I took a course at NYU to further enhanve my web dev skills: NodeJS, NPM, Webpack,
+            Express, MongoDB, Angular and React.</p>
+        </section>
+        <section class="about-section-two">
+          <h3>Current Work</h3>
+          <p>In addition to my full time job, I am assisting a small development with a webiste for their startup idea.</p>
+          <p>I am also developing an eCommerce site for a friend in the fashion industry.</p>
+          <p>When I find free time, I am always tinkering and looking to use new and emerging tech in fun projects that I beleive
+            will benefit people.</p>
+          <a routerLink="/portfolio">See My Portfolio</a>
+          <h3>Skills and Tech</h3>
+
+          <section class="skills-container">
+            <div class="skills-list">
+              <h4>Front-End</h4>
+              <ul class="skills-list">
+                <li class="skills-list__item">HTML5</li>
+                <li class="skills-list__item">CSS3/SASS</li>
+                <li class="skills-list__item">JavaScript (ES6)</li>
+              </ul>
+            </div>
+
+            <div class="skills-list">
+              <h4>Back-End</h4>
+              <ul class="skills-list">
+                <li class="skills-list__item">NodeJS</li>
+                <li class="skills-list__item">PHP</li>
+                <li class="skills-list__item">MySQL</li>
+                <li class="skills-list__item">MongoDB</li>
+              </ul>
+            </div>
+
+            <div class="skills-list">
+              <h4>Libraries &amp; Frameworks</h4>
+              <ul class="skills-list">
+                <li class="skills-list__item">Angular 6</li>
+                <li class="skills-list__item">jQuery</li>
+                <li class="skills-list__item">Bootstrap4</li>
+                <li class="skills-list__item">ExpressJS</li>
+              </ul>
+            </div>
+
+            <div class="skills-list">
+              <h4>Other</h4>
+              <ul class="skills-list">
+                <li class="skills-list__item">Git</li>
+                <li class="skills-list__item">NPM</li>
+                <li class="skills-list__item">WordPress</li>
+              </ul>
+            </div>
+
+          </section>
+        </section>
+      </div>
+      <div class="column-2">
+        <h3>Interest/Hobbies</h3>
+        <section class="interest-block">
+          <div class="interest-img">
+            <img src="../../../assets/images/angus-young.jpg" alt="">
+          </div>
+          <div class="interest-text">
+            <h4>Guitar</h4>
+            <p>I consider myself a wannabe Angus Young of AC/DC.</p>
+          </div>
+        </section>
+        <section class="interest-block">
+          <div class="interest-img__flags">
+            <img class="usa-flag-img" src="../../../assets/images/usa-flag.png" alt="">
+            <img class="french-flag-img" src="../../../assets/images/france-flag.png" alt="">
+          </div>
+          <div class="interest-text">
+            <h4>French</h4>
+            <p>I have recently obtained dual citizenship with France and am fluent in the language.</p>
+          </div>
+        </section>
+        <section class="interest-block">
+          <div class="interest-img">
+            <img src="../../../assets/images/angus-young.jpg" alt="">
+            <button (click)="runGravityBalls()">Run Gravity Balls</button>
+          </div>
+          <div class="interest-text">
+            <h4>Tennis</h4>
+            <p>Let's hit. I'm around 5.0.</p>
+          </div>
+        </section>
+      </div>
+    </div>
 
   </main>
 

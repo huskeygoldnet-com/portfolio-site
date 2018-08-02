@@ -1,0 +1,60 @@
+.container {
+    // height: 2000px;
+    padding: 0 1rem;
+    min-height: 100vh;
+    height: 100%;
+    // width: 100%;
+    overflow: auto;
+    margin: 0 0 2rem 0;
+    .about-main, .portfolio-main, .contact-main {
+        margin: 65px auto 0 auto;
+        padding: 2rem 0 0 0;
+        width: 100%;
+        max-width: 1500px;
+        @include tablet {
+            // margin: 0 0 0 120px;
+            // margin: 0;
+            // padding: 8rem 1rem 0 4rem;
+            // max-width: 500px;
+        }
+        @include desktop {
+            // margin: 0 0 0 120px;
+            // margin: 0;
+            // padding: 8rem 1rem 0 4rem;
+            // max-width: 500px;
+        }
+    }
+    @include tablet {
+        padding: 0 1rem;
+        margin: 0 0 2rem 120px;
+    }
+    @include desktop {
+        padding: 0 1rem;
+        margin: 0 0 2rem 120px;
+    }
+
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        // flex-direction: row;
+    }
+    @include desktop {
+        flex-direction: row;
+    }
+}
+
+.column-2 {
+    width: 100%;
+    padding: 0;
+    @include tablet {
+        width: auto;
+        padding: 0 1rem;
+    }
+    @include desktop {
+        width: 50%;
+        padding: 0 2rem;
+    }
+}

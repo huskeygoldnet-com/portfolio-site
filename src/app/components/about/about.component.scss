@@ -1,10 +1,153 @@
-.about-main {}
+@import './src/sass/variables';
+@import './src/sass/mixins';
 
-.about-subsection {
-    margin: 0;
-    font-size: 0.9rem;
-    padding-left: 0.5rem;
-    li {
-        margin: 0.5rem;
+.canvas-container {
+  position: fixed;
+    z-index: 4;
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin: 3rem 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.me-image {
+  float: none;
+  margin: 0;
+  @include tablet {
+    float: left;
+    margin: 0 1rem 0 0;
+  }
+  @include desktop {
+    float: left;
+    margin: 0 1rem 0 0;
+  }
+}
+
+.interest-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  //   &:nth-child(odd) .interest-text {
+  //     order: 2;
+  //     flex: 3 3 auto;
+  //   }
+  //   &:nth-child(even) .interest-text {
+  //     order: 1;
+  //     flex: 3 3 auto;
+  //   }
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+    &:nth-child(odd) .interest-text {
+      order: 2;
+      flex: 3 3 auto;
     }
+    &:nth-child(even) .interest-text {
+      order: 1;
+      flex: 3 3 auto;
+    }
+  }
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    &:nth-child(odd) .interest-text {
+        order: 2;
+        flex: 3 3 auto;
+      }
+      &:nth-child(even) .interest-text {
+        order: 1;
+        flex: 3 3 auto;
+      }
+  }
+  .interest-text {
+    order: 2;
+    flex: 3 3 auto;
+  }
+  .interest-img {
+      
+    text-align: center;
+    order: 2;
+    perspective: 1000px;
+    flex: 0 1 auto;
+    margin: 1rem 0;
+    img {
+      height: 100%;
+      width: 100%;
+      max-width: 300px;
+      transform: rotate3d(-.1, 1, 0, 45deg);
+      box-shadow: 3px 3px 4px black;
+    }
+  }
+  .interest-img__flags {
+    position: relative;
+    text-align: center;
+    order: 2;
+    flex: 0 1 auto;
+    margin: 1rem 1rem;
+    .usa-flag-img {
+      position: absolute;
+      top: 0;
+      animation: animateFlags infinite ease-in-out 5s forwards;
+    }
+    .french-flag-img {
+      // position: absolute;
+      // animation: animateFlags infinite ease-in-out 1s forwards;
+    }
+    img {
+      width: 100%;
+      max-width: 150px;
+    }
+  }
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  .skills-list {
+    margin: 0 1rem 0 1rem; // width: 50%;
+    h4 {
+      margin: 0.2rem;
+    }
+    @include desktop {
+      // width: 40%;
+    }
+    @include tablet {
+      // width: 40%;
+    }
+  }
+}
+
+@keyframes animateFlags {
+  0% {
+    transform: translate(0, 0);
+    z-index: 3;
+  }
+  50% {
+    transform: translate(0, 6rem);
+    z-index: -1;
+  }
+  95% {}
+  100% {
+    z-index: -1;
+  }
 }

@@ -8,7 +8,7 @@ import { PortfolioItemComponent } from './components/portfolio-item/portfolio-it
 import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, data: {title: 'Zach Bayoff | Web Developer', depth: 1} },
   { path: 'about', component: AboutComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'portfolio/:route_url', component: PortfolioItemComponent },
