@@ -1,36 +1,16 @@
 @import './src/sass/variables';
 @import './src/sass/mixins';
-
 .canvas-container {
   position: fixed;
-    z-index: 4;
-    width: 100%;
-    max-width: 500px;
+  z-index: 4;
+  width: 100%;
+  max-width: 500px;
 }
 
-h1 {
-  font-weight: 400;
-  font-size: 2.5rem;
-  margin: 3rem 0;
-}
 
-h2 {
-  font-weight: 400;
-  font-size: 2rem;
-  margin: 3rem 0;
-}
-
-h3 {
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-weight: 400;
-  font-size: 1.3rem;
-}
 
 .me-image {
+  border-radius: 10px;
   float: none;
   margin: 0;
   @include tablet {
@@ -43,18 +23,20 @@ h4 {
   }
 }
 
+.about-title-heading {
+  display: flex;
+  align-items: center;
+  .about-icon {
+    width: 50px;
+    margin-right: 1rem;
+  }
+}
+
 .interest-block {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
-  //   &:nth-child(odd) .interest-text {
-  //     order: 2;
-  //     flex: 3 3 auto;
-  //   }
-  //   &:nth-child(even) .interest-text {
-  //     order: 1;
-  //     flex: 3 3 auto;
-  //   }
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
   @include desktop {
     flex-direction: row;
     align-items: center;
@@ -71,20 +53,19 @@ h4 {
     flex-direction: row;
     align-items: center;
     &:nth-child(odd) .interest-text {
-        order: 2;
-        flex: 3 3 auto;
-      }
-      &:nth-child(even) .interest-text {
-        order: 1;
-        flex: 3 3 auto;
-      }
+      order: 2;
+      flex: 3 3 auto;
+    }
+    &:nth-child(even) .interest-text {
+      order: 1;
+      flex: 3 3 auto;
+    }
   }
   .interest-text {
     order: 2;
     flex: 3 3 auto;
   }
   .interest-img {
-      
     text-align: center;
     order: 2;
     perspective: 1000px;
@@ -94,7 +75,7 @@ h4 {
       height: 100%;
       width: 100%;
       max-width: 300px;
-      transform: rotate3d(-.1, 1, 0, 45deg);
+      transform: rotate3d(-0.1, 1, 0, 330deg);
       box-shadow: 3px 3px 4px black;
     }
   }
@@ -103,7 +84,7 @@ h4 {
     text-align: center;
     order: 2;
     flex: 0 1 auto;
-    margin: 1rem 1rem;
+    margin: 1rem 3rem;
     .usa-flag-img {
       position: absolute;
       top: 0;
@@ -135,6 +116,13 @@ h4 {
       // width: 40%;
     }
   }
+}
+
+.about-background,
+.about-current-work,
+.skills-container,
+.interest-block {
+  margin-bottom: 4rem;
 }
 
 @keyframes animateFlags {

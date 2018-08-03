@@ -1,87 +1,78 @@
 <div class="container">
   <main class="about-main">
-    <div class="canvas-container" (window:resize)="onResize($event)">
-    </div>
-
-
+    <!-- <div class="canvas-container" (window:resize)="onResize($event)">
+    </div> -->
     <div class="row">
-
-
-      <div class="column-2">
-        <h1>Greetings!</h1>
-        <h2>Hi, I'm Zach. I'm a web developer, based in Brooklyn, NY.</h2>
+      <div class="column-1">
+        <h2>Greetings!</h2>
+        <h1>Hi, I'm Zach - A web developer based in Brooklyn, NY.</h1>
+        <h3 class="about-title-heading"><span><img class="about-icon" src="../../../assets/images/user-image-with-black-background.png"></span>Background</h3>
         <img class="me-image" src="../../../assets/images/photo-me.png" alt="">
-        <section class="about-section-one">
-          <h3>Background</h3>
+        <section class="about-background">
           <p>I currently work as a naval architect and marine engineer in New York City, but am transitioning into the field
             of web development.
           </p>
           <p>In September 2017, I began a full-stack intensive course at CUNY City Tech, where I began my studies in web developement:
             HTML5, CSS3, Javascript, PHP, MySQL, and some other web tech goodies (jQuery, Bootstrap4, git).
           </p>
-          <p>After creating numerous projects, I took a course at NYU to further enhanve my web dev skills: NodeJS, NPM, Webpack,
+          <p>After creating numerous <a class="link" routerLink="/portfolio">projects</a>, I took a course at NYU to further enhance my web dev skills: NodeJS, NPM, Webpack,
             Express, MongoDB, Angular and React.</p>
         </section>
-        <section class="about-section-two">
-          <h3>Current Work</h3>
-          <p>In addition to my full time job, I am assisting a small development with a webiste for their startup idea.</p>
+        <section class="about-current-work">
+            <h3 class="about-title-heading"><span><img class="about-icon" src="../../../assets/images/man-in-office-desk-with-computer.png"></span>Current Work</h3>
+          <p>In addition to my full time job, I am assisting a small development with a website for their startup idea.</p>
           <p>I am also developing an eCommerce site for a friend in the fashion industry.</p>
-          <p>When I find free time, I am always tinkering and looking to use new and emerging tech in fun projects that I beleive
+          <p>When I find free time, I am always tinkering and looking to use new and emerging tech in fun projects that I believe
             will benefit people.</p>
-          <a routerLink="/portfolio">See My Portfolio</a>
-          <h3>Skills and Tech</h3>
-
-          <section class="skills-container">
-            <div class="skills-list">
-              <h4>Front-End</h4>
-              <ul class="skills-list">
-                <li class="skills-list__item">HTML5</li>
-                <li class="skills-list__item">CSS3/SASS</li>
-                <li class="skills-list__item">JavaScript (ES6)</li>
-              </ul>
-            </div>
-
-            <div class="skills-list">
-              <h4>Back-End</h4>
-              <ul class="skills-list">
-                <li class="skills-list__item">NodeJS</li>
-                <li class="skills-list__item">PHP</li>
-                <li class="skills-list__item">MySQL</li>
-                <li class="skills-list__item">MongoDB</li>
-              </ul>
-            </div>
-
-            <div class="skills-list">
-              <h4>Libraries &amp; Frameworks</h4>
-              <ul class="skills-list">
-                <li class="skills-list__item">Angular 6</li>
-                <li class="skills-list__item">jQuery</li>
-                <li class="skills-list__item">Bootstrap4</li>
-                <li class="skills-list__item">ExpressJS</li>
-              </ul>
-            </div>
-
-            <div class="skills-list">
-              <h4>Other</h4>
-              <ul class="skills-list">
-                <li class="skills-list__item">Git</li>
-                <li class="skills-list__item">NPM</li>
-                <li class="skills-list__item">WordPress</li>
-              </ul>
-            </div>
-
-          </section>
+          <a class="button-link" routerLink="/portfolio">See My Portfolio</a>
         </section>
-      </div>
-      <div class="column-2">
-        <h3>Interest/Hobbies</h3>
+        <h3 class="about-title-heading"><span><img class="about-icon" src="../../../assets/images/screwdriver-and-wrench-crossed.png"></span>Skills &amp; Tech</h3>
+        <section class="skills-container">
+          <div class="skills-list">
+            <h4><strong>Front-End</strong></h4>
+            <ul class="skills-list">
+              <li class="skills-list__item">HTML5</li>
+              <li class="skills-list__item">CSS3/SASS</li>
+              <li class="skills-list__item">JavaScript (ES6)</li>
+            </ul>
+          </div>
+          <div class="skills-list">
+            <h4><strong>Back-End</strong></h4>
+            <ul class="skills-list">
+              <li class="skills-list__item">NodeJS</li>
+              <li class="skills-list__item">PHP</li>
+              <li class="skills-list__item">MySQL</li>
+              <li class="skills-list__item">MongoDB</li>
+            </ul>
+          </div>
+          <div class="skills-list">
+            <h4><strong>Libraries &amp; Frameworks</strong></h4>
+            <ul class="skills-list">
+              <li class="skills-list__item">Angular 6</li>
+              <li class="skills-list__item">jQuery</li>
+              <li class="skills-list__item">Bootstrap4</li>
+              <li class="skills-list__item">ExpressJS</li>
+            </ul>
+          </div>
+          <div class="skills-list">
+            <h4><strong>Other</strong></h4>
+            <ul class="skills-list">
+              <li class="skills-list__item">Git</li>
+              <li class="skills-list__item">NPM</li>
+              <li class="skills-list__item">WordPress</li>
+              <li class="skills-list__item">AutoCAD</li>
+              <li class="skills-list__item">Rhino3D</li>
+            </ul>
+          </div>
+        </section>
+        <h3 class="about-title-heading"><span><img class="about-icon" src="../../../assets/images/bumper-car.png"></span>Interests &amp; Hobbies</h3>
         <section class="interest-block">
           <div class="interest-img">
             <img src="../../../assets/images/angus-young.jpg" alt="">
           </div>
           <div class="interest-text">
-            <h4>Guitar</h4>
-            <p>I consider myself a wannabe Angus Young of AC/DC.</p>
+            <h4><strong>Guitar</strong></h4>
+            <p>I consider myself a wannabe Angus Young of AC/DC, meaning I rock my face off. 🤘</p>
           </div>
         </section>
         <section class="interest-block">
@@ -90,19 +81,22 @@
             <img class="french-flag-img" src="../../../assets/images/france-flag.png" alt="">
           </div>
           <div class="interest-text">
-            <h4>French</h4>
+            <h4><strong>French</strong></h4>
             <p>I have recently obtained dual citizenship with France and am fluent in the language.</p>
           </div>
         </section>
         <section class="interest-block">
           <div class="interest-img">
-            <img src="../../../assets/images/angus-young.jpg" alt="">
-            <button (click)="runGravityBalls()">Run Gravity Balls</button>
+            <img src="../../../assets/images/tennis.jpg" alt="">
+            <!-- <button (click)="runGravityBalls()">Run Gravity Balls</button> -->
           </div>
           <div class="interest-text">
-            <h4>Tennis</h4>
+            <h4><strong>Tennis</strong></h4>
             <p>Let's hit. I'm around 5.0.</p>
           </div>
+        </section>
+        <section class="get-in-touch">
+          <h4>Get in touch! Send me an email at zrbayoffdev@gmail.com or shoot me a <a class="link" routerLink="/contact">message.</a></h4>
         </section>
       </div>
     </div>

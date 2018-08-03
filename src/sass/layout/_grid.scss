@@ -4,7 +4,7 @@
     min-height: 100vh;
     height: 100%;
     // width: 100%;
-    overflow: auto;
+    // overflow: auto;
     margin: 0 0 2rem 0;
     .about-main, .portfolio-main, .contact-main {
         margin: 65px auto 0 auto;
@@ -12,12 +12,16 @@
         width: 100%;
         max-width: 1500px;
         @include tablet {
+            padding: 0;
+            margin: 0 auto 0 auto;
             // margin: 0 0 0 120px;
             // margin: 0;
             // padding: 8rem 1rem 0 4rem;
             // max-width: 500px;
         }
         @include desktop {
+            padding: 0;
+            margin: 0 auto 0 auto;
             // margin: 0 0 0 120px;
             // margin: 0;
             // padding: 8rem 1rem 0 4rem;
@@ -38,12 +42,19 @@
 .row {
     display: flex;
     flex-direction: column;
+    align-items: center;
     @include tablet {
         // flex-direction: row;
     }
     @include desktop {
-        flex-direction: row;
+        // flex-direction: row;
     }
+}
+
+.column-1 {
+    width: 100%;
+    max-width: 800px;
+    padding: 0;
 }
 
 .column-2 {

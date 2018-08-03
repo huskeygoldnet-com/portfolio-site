@@ -1,16 +1,20 @@
 <div class="container">
   <main class="portfolio-main">
-    <h1 data-tilt data-tilt-max="50" data-tilt-speed="400">Portfolio</h1>
-    <ul *ngFor="let portfolio_item of portfolioList">
-      <li>{{portfolio_item.name}}
-        <a routerLink="{{portfolio_item.route_url}}">
-          <img class="portfolio-item-img" src={{portfolio_item.img}}>
-        </a>
-      </li>
-    </ul>
+    <div class="row">
+      <div class="column-1">
+        <h1>Portfolio</h1>
+        <section class="project-section" *ngFor="let portfolio_item of portfolioList">
+          <div class="portfolio-desc">
+            <h2>{{portfolio_item.name}}</h2>
+            <h3>{{portfolio_item.short_desc}}</h3>
+          </div>
+          <div class="portfolio-img">
+            <a routerLink="{{portfolio_item.route_url}}">
+              <img class="project-section__item-img" src={{portfolio_item.img}}>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
   </main>
-
 </div>
-<script type="text/javascript" src="vanilla-tilt.js"></script>
-
-<!-- <app-portfolio-item></app-portfolio-item> -->

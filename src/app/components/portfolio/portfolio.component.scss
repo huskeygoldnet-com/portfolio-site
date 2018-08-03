@@ -1,3 +1,52 @@
-.portfolio-item-img {
-    width: 70%;
+@import './src/sass/variables';
+@import './src/sass/mixins';
+.project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+  padding: 0.5rem;
+  @include desktop {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  @include tablet {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .portfolio-desc {
+    padding: 1rem;
+    h2 {
+      font-size: 1.75rem;
+      margin: 0.5rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem;
+    }
+  }
+  .portfolio-img {
+    padding: 1rem;
+    .project-section__item-img {
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+  &:nth-of-type(even) {
+    .portfolio-desc {
+      order: 1;
+    }
+    .portfolio-img {
+      order: 2;
+    }
+  }
+  &:nth-of-type(odd) {
+    .portfolio-desc {
+      order: 2;
+    }
+    .portfolio-img {
+      order: 1;
+    }
+  }
 }
