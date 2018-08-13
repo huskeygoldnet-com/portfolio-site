@@ -4,12 +4,6 @@ import { portfolio_list } from '../../data/portfolio.model';
 import { VanillaTilt } from 'vanilla-tilt';
 
 
-
-
-
-
-
-
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
