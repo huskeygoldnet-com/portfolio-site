@@ -20,7 +20,7 @@ export class PortfolioItemComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      console.log(params.get('route_url'));
+      // console.log(params.get('route_url'));
       this.portfolio_item = portfolio_list.find((item) => {
         return item.route_url === params.get('route_url');
       });

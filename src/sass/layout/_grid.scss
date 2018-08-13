@@ -6,7 +6,7 @@
     // width: 100%;
     // overflow: auto;
     margin: 0 0 2rem 0;
-    .about-main, .portfolio-main, .contact-main {
+    .about-main, .portfolio-main, .contact-main, .portfolio-item-main {
         margin: 65px auto 0 auto;
         padding: 2rem 0 0 0;
         width: 100%;
@@ -52,19 +52,35 @@
 }
 
 .column-1 {
-    width: 100%;
+    // width: 100%;
     max-width: 800px;
     padding: 0;
+    @include tablet {
+        // width: 100%;
+        max-width: 800px;
+        // width: auto;
+        padding: 0 1rem;
+    }
+    @include desktop {
+        // width: 50%;
+        max-width: 800px;
+        // width: 50%;
+        padding: 0 2rem;
+    }
 }
 
 .column-2 {
     width: 100%;
     padding: 0;
     @include tablet {
+        width: 100%;
+        // max-width: 800px;
         width: auto;
         padding: 0 1rem;
     }
     @include desktop {
+        width: 50%;
+        // max-width: 800px;
         width: 50%;
         padding: 0 2rem;
     }
