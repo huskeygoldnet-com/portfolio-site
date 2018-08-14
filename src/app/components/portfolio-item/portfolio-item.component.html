@@ -12,22 +12,44 @@
         <h1>{{portfolio_item.name}}</h1>
         <h2>{{portfolio_item.short_desc}}</h2>
         <p class="portfolio-item-desc">{{portfolio_item.description}}</p>
+        <a class="project-link-url button-link" href={{portfolio_item.abs_url}} target="_blank">See it Live</a>
         <p>Tech Used:</p>
-        <ul>
+        <ul class="tech-used-list">
           <li *ngFor="let portfolio_tech_item of portfolio_item.technologies">{{portfolio_tech_item}}</li>
         </ul>
       </div>
       <div class="column-2">
-        <div class="project-item-main_img screenshot-macbook">
-          <img class="" src={{portfolio_item.img}}>
-        </div>
-        <a class="project-link-url button-link" href={{portfolio_item.abs_url}} target="_blank">See it Live</a>
+        <section class="project-item_desktop-section">
+          <div class="project-item_laptop-screenshot">
+            <div class="project-item-main_img screenshot-macbook">
+              <img class="" src={{portfolio_item.home_screenshots.laptop}}>
+            </div>
+          </div>
+        </section>
+        <section class="project-item_mobile-section">
+          <div class="project-item_ipad-screenshot">
+            <div class="project-item-main_img screenshot-ipad">
+              <img class="" src={{portfolio_item.home_screenshots.ipad}}>
+            </div>
+          </div>
+          <div class="project-item_iphone-screenshot">
+            <div class="project-item-main_img screenshot-iphone">
+              <img class="" src={{portfolio_item.home_screenshots.iphone}}>
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+        
 
       </div>
     </div>
     <div class="row">
       <div class="column-1">
-        <div class="portfolio-item-screenshot screenshot-mac" *ngFor="let portfolio_item_screenshot of portfolio_item.screenshots">
+        <div class="portfolio-item-screenshot" *ngFor="let portfolio_item_screenshot of portfolio_item.other_screenshots">
           <img src={{portfolio_item_screenshot}} alt="">
         </div>
       </div>
