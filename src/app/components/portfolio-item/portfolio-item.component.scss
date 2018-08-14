@@ -32,16 +32,16 @@
 }
 
 .project-item-main_img {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .project-link-url {
-    order: 1;
-  }
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // .project-link-url {
+  //   order: 1;
+  // }
   img {
     order: 2;
-    width: 100%;
+    // width: 100%;
   }
   @include desktop {
     .project-link-url {
@@ -71,23 +71,23 @@
 .portfolio-item-screenshot {
   // max-width: 400px;
   //   width: 100%;
-  text-align: center;
-  //   margin-bottom: 2rem;
-  overflow: auto;
-  padding-bottom: 50%;
-  border: 20px solid black;
-  border-radius: 30px;
-  position: relative;
-  margin: 2rem 0 2rem 0;
+  // text-align: center;
+  // //   margin-bottom: 2rem;
+  // overflow: auto;
+  // padding-bottom: 50%;
+  // border: 20px solid black;
+  // border-radius: 30px;
+  // position: relative;
+  // margin: 2rem 0 2rem 0;
   @include desktop {}
   @include tablet {}
   img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // width: 100%;
     // padding: 1rem;
   }
 }

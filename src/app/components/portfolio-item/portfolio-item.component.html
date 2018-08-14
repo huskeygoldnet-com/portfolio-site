@@ -5,31 +5,32 @@
     </main>
   </div> -->
 
-  <div class="container">
-      <main class="portfolio-item-main">
-        <div class="row hero-row">
-          <div class="column-2">
-            <h1>{{portfolio_item.name}}</h1>
-            <h2>{{portfolio_item.short_desc}}</h2>
-            <p class="portfolio-item-desc">{{portfolio_item.description}}</p>
-            <p>Tech Used:</p>
-            <ul>
-              <li *ngFor="let portfolio_tech_item of portfolio_item.technologies">{{portfolio_tech_item}}</li>
-            </ul>
-          </div>
-          <div class="column-2">
-            <div class="project-item-main_img">
-                <img src={{portfolio_item.img}}>
-                <a class="project-link-url button-link" href={{portfolio_item.abs_url}} target="_blank">See it Live</a>
-            </div>
-          </div>
+<div class="container">
+  <main class="portfolio-item-main">
+    <div class="row hero-row">
+      <div class="column-2">
+        <h1>{{portfolio_item.name}}</h1>
+        <h2>{{portfolio_item.short_desc}}</h2>
+        <p class="portfolio-item-desc">{{portfolio_item.description}}</p>
+        <p>Tech Used:</p>
+        <ul>
+          <li *ngFor="let portfolio_tech_item of portfolio_item.technologies">{{portfolio_tech_item}}</li>
+        </ul>
+      </div>
+      <div class="column-2">
+        <div class="project-item-main_img screenshot-macbook">
+          <img class="" src={{portfolio_item.img}}>
         </div>
-        <div class="row">
-            <div class="column-1">
-              <div class="portfolio-item-screenshot" *ngFor="let portfolio_item_screenshot of portfolio_item.screenshots">
-                <img src={{portfolio_item_screenshot}} alt="">
-              </div>
-            </div>
-        </div>
-      </main>
+        <a class="project-link-url button-link" href={{portfolio_item.abs_url}} target="_blank">See it Live</a>
+
+      </div>
     </div>
+    <div class="row">
+      <div class="column-1">
+        <div class="portfolio-item-screenshot screenshot-mac" *ngFor="let portfolio_item_screenshot of portfolio_item.screenshots">
+          <img src={{portfolio_item_screenshot}} alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
