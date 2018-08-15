@@ -24,17 +24,17 @@ export const portfolio_list = [
     {
         name: 'Roomies',
         route_url: 'roomies',
-        abs_url: '',
-        short_desc: 'Roommate management and organization app.',
+        abs_url: 'https://roomies.zachbayoff.com/',
+        short_desc: 'Roommate management and organization app',
         completed_date: 'March 2018',
         description: 'Roomies is an application that lets roommates easily manage their chores, schedule visitors, and keep track of household purchases. Roommates are part of a "group" and may join several groups. Roomates can add their phone numbers to be automatically notified about chore dates, visitor arrivals, and household item\'s bills.',
         technologies: ['PHP', 'MySQL', 'jQuery', 'Bootstrap4', 'AJAX'],
         desc_img: '../assets/images/portfolio/roomies/project-desc-roomies.png',
         home_screenshots:
         {
-            laptop: '../assets/images/portfolio/roomies/signup-page.png',
-            ipad: '../assets/images/portfolio/roomies/signup-page.png',
-            iphone: '../assets/images/portfolio/roomies/signup-page.png'
+            laptop: '../assets/images/portfolio/roomies/home-screenshot-laptop.png',
+            ipad: '../assets/images/portfolio/roomies/home-screenshot-ipad.png',
+            iphone: '../assets/images/portfolio/roomies/home-screenshot-iphone.png'
         },
         other_screenshots: [
             '../assets/images/portfolio/roomies/login-page.png', '../assets/images/portfolio/roomies/signup-page.png',
@@ -45,7 +45,7 @@ export const portfolio_list = [
         name: 'Travel App',
         route_url: 'travelapp',
         abs_url: 'https://zb-travel-app.herokuapp.com',
-        short_desc: 'An app to organize your travel destinations and costs.',
+        short_desc: 'An app to organize your travel destinations and costs',
         completed_date: 'May 2018',
         description: 'This web application was created for those who like to travel, but may not have an easy way to keep track of all of their desired destinations and associated expenses. With Travel App (pardon the lack of inticing app name), a user can create, update, and delete a "trip", filling in details such as the trip destination, travel dates, and list of costs one might incur while traveling. \n\nThis app also calls the Unsplash API that allows the user to find high resolution, beautiful photographs of just about anything, and could maybe help remind them of the beauties that their destinations hold. A MongoDB database was set up to store the users trips, meaning that anyone can access anyone\'s trips. This was implemented more on a proof-of-concept basis than an actual user authentication app. I may add this implementation in the future.',
         technologies: ['Angular 6', 'SASS', 'NodeJS', 'Express', 'MongoDB'],
@@ -66,7 +66,7 @@ export const portfolio_list = [
         name: 'Weather App',
         route_url: 'weatherapp',
         abs_url: 'https://zb-weather-app.herokuapp.com',
-        short_desc: 'Get current weather data for any city/country in the world.',
+        short_desc: 'Get current weather data for any city/country in the world',
         completed_date: 'May 2018',
         description: 'Weather App is a simple, single page application that makes a call to the OpenWeatherMap API via a city/zip code and country combination. The weather data is retrieved via JSON and displayed with a high resolution background image to indicate the type of weather at the current time and place. The user can switch between Farenheit and Celcius. A Google Map is also embedded to indicate the latitude and longitude of the location the user has requested.',
         technologies: ['AngularJS', 'Webpack', 'Express', 'SASS'],
