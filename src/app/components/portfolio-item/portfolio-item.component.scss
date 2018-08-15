@@ -18,13 +18,11 @@
       flex-direction: row;
       justify-content: center;
       align-items: flex-start;
-      margin: 5rem auto 0 auto;
-      // max-width: 1000px;
+      margin: 5rem auto 0 auto; // max-width: 1000px;
     }
     @include tablet {
       flex-direction: column; // justify-content: center;
-      margin: 5rem auto 0 auto;
-      // max-width: 1000px;
+      margin: 5rem auto 0 auto; // max-width: 1000px;
     }
   }
 }
@@ -89,20 +87,16 @@
   }
 }
 
-
-
 .portfolio-item-screenshot {
   // max-width: 400px;
-    // width: 100%;
-  text-align: center;
-  //   margin-bottom: 2rem;
+  // width: 100%;
+  text-align: center; //   margin-bottom: 2rem;
   overflow: auto;
   padding-bottom: 50%;
-  border: 30px solid black;
-  border-radius: 30px;
+  border: 20px solid black;
+  border-radius: 20px;
   position: relative;
-  margin: 2rem 0 2rem 0;
-  // @include desktop {}
+  margin: 2rem 0 2rem 0; // @include desktop {}
   // @include tablet {}
   img {
     position: absolute;
@@ -111,5 +105,91 @@
     left: 0;
     right: 0;
     width: 100%;
+  }
+}
+
+.portfolio-item-projects-nav {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 4rem 0;
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+  }
+  .portfolio-item-prev-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 0.5rem;
+    @include desktop {
+      justify-content: center;
+      flex-direction: row;
+    }
+    @include tablet {
+      justify-content: center;
+      flex-direction: row;
+    }
+    .portfolio-item-prev-img {
+      padding: 0 1rem 0 0;
+      img {
+        max-width: 300px;
+        width: 100%;
+      }
+    }
+    .portfolio-item-prev {
+      display: flex;
+      flex-direction: column;
+      
+      img {
+        width: 50px;
+      }
+    }
+  }
+  .portfolio-item-next-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    @include desktop {
+      justify-content: center;
+      flex-direction: row;
+    }
+    @include tablet {
+      justify-content: center;
+      flex-direction: row;
+    }
+    .portfolio-item-next-img {
+      order: 1;
+      padding: 0 0 0 1rem;
+      @include desktop {
+        order: 2;
+      }
+      @include tablet {
+        order: 2;
+      }
+      img {
+        max-width: 300px;
+        width: 100%;
+      }
+    }
+    .portfolio-item-next {
+      display: flex;
+      flex-direction: column;
+      order: 2;
+      text-align: right;
+      align-items: flex-end;
+      @include desktop {
+        order: 1;
+      }
+      @include tablet {
+        order: 1;
+      }
+      img {
+        width: 50px;
+      }
+    }
   }
 }

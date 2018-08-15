@@ -47,7 +47,27 @@
         </div>
       </div>
     </div>
-    <a routerLink="/portfolio/{{prev_portfolio_item}}">Prev Portfolio Item</a>
-    <a routerLink="/portfolio/{{next_portfolio_item}}">Next Portfolio Item</a>
+    <div class="row">
+      <div class="column-1 portfolio-item-projects-nav">
+        <a class="portfolio-item-prev-project" routerLink="/portfolio/{{prev_portfolio_item.route_url}}">
+          <div class="portfolio-item-prev-img">
+            <img src={{prev_portfolio_item.desc_img}}>
+          </div>
+          <div class="portfolio-item-prev">
+            Previous Project
+            <img src="../../../assets/images/back-arrow.png">
+          </div>
+        </a>
+        <a class="portfolio-item-next-project" routerLink="/portfolio/{{next_portfolio_item.route_url}}">
+          <div class="portfolio-item-next-img">
+            <img src={{next_portfolio_item.desc_img}}>
+          </div>
+          <div class="portfolio-item-next">
+            Next Project
+            <img src="../../../assets/images/forward-arrow.png">
+          </div>
+        </a>
+      </div>
+    </div>
   </main>
 </div>

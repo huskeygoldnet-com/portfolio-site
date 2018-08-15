@@ -8,7 +8,7 @@
     margin: 0 0 2rem 0;
     .about-main, .portfolio-main, .contact-main, .portfolio-item-main {
         margin: 65px auto 0 auto;
-        padding: 2rem 0 0 0;
+        padding: 0;
         width: 100%;
         max-width: 1500px;
         @include tablet {

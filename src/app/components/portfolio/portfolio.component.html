@@ -5,9 +5,8 @@
         <h1>Portfolio</h1>
         <section class="project-section">
           <div class="portfolio-img-container" *ngFor="let portfolio_item of portfolioList">
-              <p class="portfolio-detail-msg">See Details</p>
+            <a routerLink="{{portfolio_item.route_url}}" class="portfolio-detail-msg">See Details</a>
             <a routerLink="{{portfolio_item.route_url}}">
-              
               <img class="portfolio-img" src={{portfolio_item.desc_img}}>
               <div class="portfolio-desc">
                 <h2>{{portfolio_item.name}}</h2>
