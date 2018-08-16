@@ -39,6 +39,8 @@ export class ContactComponent implements OnInit {
         err => {
           console.error('Oops:', err.message);
         });
+
+      this.contactForm.reset();
     }
 
   }

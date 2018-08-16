@@ -1,9 +1,32 @@
 <header class="header">
-  <nav class="navbar">
-    <a routerLink="/">Home</a>
-    <a routerLink="/about">About</a>
-    <a routerLink="/portfolio">Portfolio</a>
-    <a routerLink="/contact">Contact</a>
-  </nav>
+  <div class="header-inner">
+    <div class="logo-abbrv">
+      <p class="logo__text">
+        <a routerLink="/">ZB</a>
+      </p>
+    </div>
+    <nav class="navbar" [ngClass]="{'open-nav' : toggle}">
+      <a (click)="hideNav()" routerLink="/">
+        <img src="../../../assets/images/home.png">
+        <p class="nav-label">Home</p>
+      </a>
+      <a (click)="hideNav()" routerLink="/about">
+        <img src="../../../assets/images/avatar.png">
+        <p class="nav-label">About</p>
+      </a>
+      <a (click)="hideNav()" routerLink="/portfolio">
+        <img src="../../../assets/images/briefcase.png">
+        <p class="nav-label">Portfolio</p>
+      </a>
+      <a (click)="hideNav()" routerLink="/contact">
+        <img src="../../../assets/images/message.png">
+        <p class="nav-label">Contact</p>
+      </a>
+    </nav>
+    <div class="nav-toggle" (click)="toggleNav()" [ngClass]="{'open-toggle' : toggle}">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </div>
 </header>
-

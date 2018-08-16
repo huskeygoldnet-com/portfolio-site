@@ -4,30 +4,51 @@
       <div class="column-1">
         <h1>Contact</h1>
         <p>Feel free to contact me about anything. Send me an email or shoot me a message below. Thanks!</p>
-        <form (ngSubmit)="sendEmail()" [formGroup]="contactForm">
+        <section class="contact-block">
+          <div class="contact-block-1">
+            <div class="contact-location">
+              <img class="contact-icon" src="../../../assets/images/location-icon.png" alt="">
+              <p>Brooklyn, NY</p>
+            </div>
+            <div class="contact-email">
+              <img class="contact-icon"  src="../../../assets/images/mail-icon.png" alt="">
+              <p>zrbayoffdev@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-block-2">
+            <div>
+              <a href="https://github.com/zbayoff" target="_blank"><img src="../../../assets/images/github-logo.png" alt=""></a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/zachary-bayoff-6281a1a2/" target="_blank"><img src="../../../assets/images/linkedin-logo.png" alt=""></a>
+              </div>
+          </div>
+
+        </section>
+
+        <form novalidate (ngSubmit)="sendEmail()" [formGroup]="contactForm">
           <div class="form-group">
-            <label for="">Name</label>
+            <label class="visuallyhidden" for="">Name</label>
             <input type="text" placeholder="Name" formControlName="name" required>
             <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
               <div *ngIf="name.errors.required">
                 Name is required.
               </div>
             </div> -->
-            <div *ngIf="contactForm.controls.name.invalid && contactForm.controls.name.touched">Please enter your name</div>
+            <p class="alert alert-danger" *ngIf="contactForm.controls.name.invalid && contactForm.controls.name.touched">Please enter your name.</p>
           </div>
           <div class="form-group">
-            <label for="">Email</label>
+            <label class="visuallyhidden" for="">Email</label>
             <input type="email" placeholder="Email" formControlName="email" required>
+            <p class="alert alert-danger" *ngIf="contactForm.controls.email.invalid && contactForm.controls.email.touched">Please enter a valid email.</p>
           </div>
           <div class="form-group">
-            <label for="">Message</label>
-            <textarea formControlName="message" required></textarea>
+            <label class="visuallyhidden" for="">Message</label>
+            <textarea formControlName="message" placeholder="Message" required></textarea>
+            <p class="alert alert-danger" *ngIf="contactForm.controls.message.invalid && contactForm.controls.message.touched">Please provide a brief message.</p>
           </div>
-          <button type="submit">Send</button>
+          <button class="button-link" type="submit">Send</button>
         </form>
-        <p>Form value {{ contactForm.value | json }} </p>
-        <p> Form status {{ contactForm.status | json}} </p>
-
       </div>
     </div>
   </main>
