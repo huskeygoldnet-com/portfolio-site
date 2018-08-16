@@ -75,3 +75,7 @@ router-outlet {
 .routeContainer>* {
     display: block;
 }
+
+.alert.alert-danger {
+    color: red;
+}

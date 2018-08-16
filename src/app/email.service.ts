@@ -22,7 +22,7 @@ export class EmailService {
       map((res) => {
         return res.json();
       }),
-      catchError((err, caught) => caught)
+      catchError(val => of(`I caught: ${val}`))
     );
   }
 

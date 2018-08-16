@@ -4,21 +4,30 @@
       <div class="column-1">
         <h1>Contact</h1>
         <p>Feel free to contact me about anything. Send me an email or shoot me a message below. Thanks!</p>
-        <form (submit)="sendEmail(message)" action="">
+        <form (ngSubmit)="sendEmail()" [formGroup]="contactForm">
           <div class="form-group">
             <label for="">Name</label>
-            <input type="text" name="name" placeholder="Name" [(ngModel)]="message.name">
+            <input type="text" placeholder="Name" formControlName="name" required>
+            <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+              <div *ngIf="name.errors.required">
+                Name is required.
+              </div>
+            </div> -->
+            <div *ngIf="contactForm.controls.name.invalid && contactForm.controls.name.touched">Please enter your name</div>
           </div>
           <div class="form-group">
             <label for="">Email</label>
-            <input type="email" name="email" placeholder="Email" [(ngModel)]="message.email">
+            <input type="email" placeholder="Email" formControlName="email" required>
           </div>
           <div class="form-group">
             <label for="">Message</label>
-            <textarea name="message" [(ngModel)]="message.message"></textarea>
+            <textarea formControlName="message" required></textarea>
           </div>
           <button type="submit">Send</button>
         </form>
+        <p>Form value {{ contactForm.value | json }} </p>
+        <p> Form status {{ contactForm.status | json}} </p>
+
       </div>
     </div>
   </main>

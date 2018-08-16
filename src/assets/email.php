@@ -1,5 +1,9 @@
 <?php
 
+$errors = [];
+
+
+
 switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"): //Allow preflighting to take place.
         header("Access-Control-Allow-Origin: *");
@@ -13,17 +17,51 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
         $params = json_decode($json);
 
-        $email = $params->email;
-        $name = $params->name;
-        $message = $params->message;
+        // validate name field
+        if (empty($params->name)) {
+            $errors[] = ["status" => "error", "field" => "name", "msg" => "Please enter your name."];
+        } else {
+            $name = $params->name;
+        }
 
-        $recipient = 'targetInbox@exmaple.com';
-        $subject = 'new message';
-        $headers = "From: $name <$email>";
+        // validate email field
+        if (empty($params->email)) {
+            $errors[] = ["status" => "error", "field" => "email", "msg" => "Please enter your email."];
+        } else {
+            $email = $params->email;
+        }
 
-        $response_array['status'] = 'success';
-        $response_array['from'] = $email;
-        echo json_encode($response_array);
+        // validate message field
+        if (empty($params->message)) {
+            $errors[] = ["status" => "error", "field" => "message", "msg" => "Please give a brief message."];
+        } else {
+            $message = $params->message;
+        }
+
+        if (empty($errors)) {
+        
+            $errors[] = ["status" => "ok"];
+            
+            //mail function
+            $to = "zrbayoffdev@gmail.com";
+            $subject = "zachbayoff.com Message";
+            $headers = "From: " . $name . " " . "<".$email.">";
+            
+            // mail($to, $subject, $message, $headers);
+            
+            echo json_encode($errors);
+            
+        } else {
+            echo json_encode($errors);
+        } 
+
+        // $recipient = 'targetInbox@exmaple.com';
+        // $subject = 'new message';
+        // $headers = "From: $name <$email>";
+
+        // $response_array['status'] = 'success';
+        // $response_array['from'] = $email;
+        // echo json_encode($response_array);
         // echo json_encode($from_email);
         // header($response_array);
 
