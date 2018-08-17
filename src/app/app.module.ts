@@ -13,6 +13,9 @@ import { AboutComponent } from './components/about/about.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PortfolioItemComponent } from './components/portfolio-item/portfolio-item.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+import { TypingAnimationModule } from 'angular-typing-animation';
 
 
 @NgModule({
@@ -23,7 +26,8 @@ import { PortfolioItemComponent } from './components/portfolio-item/portfolio-it
     AboutComponent,
     PortfolioComponent,
     ContactComponent,
-    PortfolioItemComponent
+    PortfolioItemComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { PortfolioItemComponent } from './components/portfolio-item/portfolio-it
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TypingAnimationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
