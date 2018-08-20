@@ -5,7 +5,7 @@
     </main>
   </div> -->
 
-<div class="container">
+<div *ngIf="portfolio_item" class="container">
   <main class="portfolio-item-main">
     <div class="row hero-row">
       <div class="column-2">
@@ -13,7 +13,7 @@
         <h2>{{portfolio_item.short_desc}}</h2>
         <p class="date-completed">{{portfolio_item.completed_date}}</p>
         <p class="portfolio-item-desc">{{portfolio_item.description}}</p>
-        <a class="project-link-url button-link" href={{portfolio_item.abs_url}} target="_blank">See it Live</a>
+        <a class="project-link-url button-link" href={{portfolio_item.abs_url}} target="_blank">See it Live<span class="button-link__arrow fa fa-angle-right"></span></a>
         <h4>Tech Used:</h4>
         <ul class="tech-used-list">
           <li *ngFor="let portfolio_tech_item of portfolio_item.technologies">{{portfolio_tech_item}}</li>
@@ -41,7 +41,7 @@
         </section>
       </div>
     </div>
-    <div class="row">
+    <div class="row" *ngIf="portfolio_item.other_screenshots">
       <div class="column-1 portfolio-item-screenshots">
         <div class="portfolio-item-screenshot" *ngFor="let portfolio_item_screenshot of portfolio_item.other_screenshots">
           <img src={{portfolio_item_screenshot}} alt="">
@@ -72,3 +72,4 @@
     </div>
   </main>
 </div>
+<app-footer></app-footer>

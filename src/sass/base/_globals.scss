@@ -1,8 +1,7 @@
 @import '../variables';
 @import '../mixins';
 @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
-
-
+@import url('https://fonts.googleapis.com/css?family=Lato');
 html {
     box-sizing: border-box;
 }
@@ -17,8 +16,37 @@ body {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, button, ul, li, input, textarea{
+// router-outlet ~ * {
+//     position: absolute;
+//     height: 100%;
+//     width: 100%;
+//   }
+
+.route-container {
+    position:relative;
+}
+.route-container>* {
+    display:block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+ul,
+li,
+input,
+textarea,
+span {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p,
+li {
     line-height: 27px;
 }
 
@@ -27,7 +55,7 @@ a {
 }
 
 h1 {
-    line-height: 3rem;
+    // line-height: 3rem;
     font-weight: 400;
 }
 
@@ -35,17 +63,15 @@ h2 {
     font-weight: 400;
 }
 
-
-  
-  h3 {
+h3 {
     font-weight: 400;
     font-size: 1.75rem;
-  }
-  
-  h4 {
+}
+
+h4 {
     font-weight: 400;
     font-size: 1.3rem;
-  }
+}
 
 p {
     font-size: 1.1rem;
@@ -59,27 +85,46 @@ p {
     cursor: pointer;
     margin: 1rem 0;
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     text-decoration: none;
     background-color: white;
     color: $accent-color;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border: 2px solid black;
-    transition: background-color, color, border, .5s ease-in-out;
+    transition: all .25s ease-in-out;
     font-weight: 600;
-
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    .button-link__arrow {
+        font-size: 1.8rem;
+        position: absolute;
+        right: -50px;
+        overflow: hidden;
+        transition: right .25s ease-in-out;
+        opacity: 0;
+        transform: translateY(-50%);
+        top: 50%;
+    }
     &:hover {
         background-color: $accent-color;
         color: white;
-        border: 2px solid $accent-color;
-        // border: 3px solid black;
+        padding: 0.75rem 2rem 0.75rem 1rem;
+        .button-link__arrow {
+            right: 10px;
+            transition: opacity, right .25s ease-in-out;
+            opacity: 1;
+        } // border: 2px solid $accent-color; // border: 3px solid black;
     }
 }
 
-
-router-outlet {
-    display: none;
-}
+// router-outlet {
+//     display: none;
+// }
 
 .routeContainer {
     position: relative;
@@ -104,4 +149,4 @@ router-outlet {
     padding: 0;
     position: absolute;
     width: 1px;
-  }
+}

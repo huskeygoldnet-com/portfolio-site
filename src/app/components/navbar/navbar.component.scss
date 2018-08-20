@@ -1,244 +1,207 @@
 @import './src/sass/variables';
 @import './src/sass/mixins';
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  background-color: $accent-color;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  z-index: 5;
-  .header-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-image: linear-gradient(to right top, #0a369d, #0050b7, #006bd0, #0086e8, #00a1ff);
+    position: fixed;
+    top: 0;
+    bottom: 0;
     width: 100%;
-    .logo-abbrv {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      margin: 0 0 0 1rem;
-      z-index: 1;
-      .logo__text {
-        margin: 0;
-        a {
-          display: block;
-          font-family: 'Sedgwick Ave Display', cursive;
-          font-size: 2.5rem;
-          text-decoration: none;
-          margin-top: 1rem;
-          margin-bottom: 1rem;
-          color: #59CD90;
-          -webkit-text-stroke: 2px black;
-          -webkit-font-smoothing: antialiased;
-        }
-      }
-      @include tablet {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        text-align: center;
-        margin: 3rem 0 0 0;
-      }
-      @include desktop {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        text-align: center;
-        margin: 3rem 0 0 0;
-      }
-    }
-    .navbar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      font-size: 1rem;
-      transform: translateY(0%);
-      transition: all 0.75s ease;
-      background-color: $accent-color;
-      opacity: 0;
-      visibility: hidden;
-      &.open-nav {
-        transform: translateY(100%); // background-color: #0A369D;
-        opacity: 1;
-        visibility: visible;
+    height: 95px;
+    z-index: 5;
+    .header-inner {
         width: 100%;
+        .logo-abbrv {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            margin: 0 0 0 1rem;
+            z-index: 1;
+            .logo__text {
+                margin: 0;
+                a {
+                    display: block;
+                    font-family: 'Sedgwick Ave Display', cursive;
+                    font-size: 2.5rem;
+                    text-decoration: none;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    color: #59CD90;
+                    -webkit-text-stroke: 2px black;
+                    -webkit-font-smoothing: antialiased;
+                }
+            }
+            @include tablet {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                margin: 3rem 0 0 0;
+            }
+            @include desktop {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                margin: 3rem 0 0 0;
+            }
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            font-size: 1rem;
+            transform: translateY(0%);
+            transition: all 0.75s ease;
+            background-image: linear-gradient(to right top, #0a369d, #0050b7, #006bd0, #0086e8, #00a1ff);
+            opacity: 0;
+            visibility: hidden;
+            &.open-nav {
+                transform: translateY(100%); // background-color: #0A369D;
+                opacity: 1;
+                visibility: visible; // width: 100%;
+                @include tablet {
+                    transform: translateY(0%);
+                }
+                @include desktop {
+                    transform: translateY(0%);
+                }
+            }
+            a {
+                cursor: pointer;
+                text-decoration: none;
+                color: white;
+                padding: 1rem;
+                margin: 0;
+                img {
+                    width: 60px;
+                    transition: all 0.25s ease-in-out;
+                    padding: 0.9rem;
+                }
+                &:hover img {
+                    transform: scale(1.2);
+                }
+                &.active-link img {
+                    border: 1px solid white;
+                    border-radius: 20px;
+                }
+                @include tablet {
+                    padding: 1rem 0;
+                    margin: 1rem 0;
+                    width: 100%;
+                }
+                @include desktop {
+                    padding: 1rem 0;
+                    margin: 1rem 0;
+                    width: 100%;
+                }
+            }
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 120px;
+                opacity: 1;
+                visibility: visible;
+                background-image: none
+            }
+            @include desktop {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 120px;
+                opacity: 1;
+                visibility: visible;
+                background-image: none
+            }
+        }
         @include tablet {
-          transform: translateY(0%);
+            width: auto;
         }
         @include desktop {
-          transform: translateY(0%);
+            width: auto;
         }
-      }
-      a {
-        cursor: pointer;
-        text-decoration: none;
-        color: white;
-        padding: 1rem;
-        margin: 0;
-        img {
-          width: 35px; // background-color: white;
-          transition: all 0.25s ease-in-out;
+        .nav-toggle {
+            position: absolute;
+            right: 0;
+            transform: translateY(-50%);
+            top: 50%;
+            margin-right: 1rem;
+            .bar1,
+            .bar2,
+            .bar3 {
+                width: 35px;
+                height: 4px;
+                background-color: #59CD90;
+                margin: 6px 0;
+                transition: 0.4s;
+                border-radius: 15px;
+                border: 1px solid black;
+            }
+            &.open-toggle {
+                .bar1 {
+                    -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+                    transform: rotate(-45deg) translate(-8px, 7px);
+                }
+                .bar2 {
+                    opacity: 0;
+                }
+                .bar3 {
+                    -webkit-transform: rotate(45deg) translate(-7px, -7px);
+                    transform: rotate(45deg) translate(-7px, -7px);
+                }
+            }
+            @include tablet {
+                display: none;
+            }
+            @include desktop {
+                display: none;
+            }
         }
-        &:hover img {
-          transform: scale(1.2);
+    }
+    &:hover {
+        .nav-label {
+            left: 50%;
+            transform: translateX(-50%); // opacity: 1 !important;
+            // visibility: visible !important;
+            // height: auto !important; // 
+            transition: all 0.5s ease-in-out; // z-index: 5;
+            // animation: slideInNavLabel 1s ease-in-out forwards;
         }
-        @include tablet {
-          padding: 1rem 0;
-          margin: 1rem 0;
-          width: 100%;
-        }
-        @include desktop {
-          padding: 1rem 0;
-          margin: 1rem 0;
-          width: 100%;
-        }
-      }
-      @include tablet {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 120px;
-        opacity: 1;
-        visibility: visible;
-      }
-      @include desktop {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 120px;
-        opacity: 1;
-        visibility: visible;
-      }
     }
     @include tablet {
-      width: auto;
+        font-size: 2rem;
+        left: 0;
+        width: 120px;
+        height: 100vh;
     }
     @include desktop {
-      width: auto;
+        font-size: 2rem;
+        left: 0;
+        width: 120px;
+        height: 100vh;
     }
-    .nav-toggle {
-      position: absolute;
-      right: 0;
-      transform: translateY(-50%);
-      top: 50%;
-      margin-right: 1rem;
-      .bar1,
-      .bar2,
-      .bar3 {
-        width: 35px;
-        height: 5px;
-        background-color: #59CD90;
-        margin: 6px 0;
-        transition: 0.4s;
-        border-radius: 15px;
-      }
-      &.open-toggle {
-        .bar1 {
-          -webkit-transform: rotate(-45deg) translate(-10px, 7px);
-          transform: rotate(-45deg) translate(-10px, 7px);
-        }
-        .bar2 {
-          opacity: 0;
-        }
-        .bar3 {
-          -webkit-transform: rotate(45deg) translate(-7px, -7px);
-          transform: rotate(45deg) translate(-7px, -7px);
-        }
-      }
-      @include tablet {
-        display: none;
-      }
-      @include desktop {
-        display: none;
-      }
-    }
-  }
-  &:hover {
-    .nav-label {
-      left: 50%;
-      transform: translateX(-50%); // opacity: 1 !important;
-      // visibility: visible !important;
-      // height: auto !important; // 
-      transition: all 0.5s ease-in-out; // z-index: 5;
-      // animation: slideInNavLabel 1s ease-in-out forwards;
-    }
-  }
-  @include tablet {
-    font-size: 2rem;
-    left: 0;
-    width: 120px;
-    height: 100vh;
-  }
-  @include desktop {
-    font-size: 2rem;
-    left: 0;
-    width: 120px;
-    height: 100vh;
-  }
 }
 
 .nav-label {
-  // opacity: 0;
-  margin: 0.2rem 0; // height: 0;
-  // overflow: hidden;
-  position: absolute; // animation: slideOutNavLabel 1s ease-in-out forwards; // transform: translateX(-50%);
-  left: -200px;
-  display: none;
-  transition: all 0.5s ease-in-out;
-  @include tablet {
-    display: block; // transition: all 0.5s ease-in-out;
-  }
-  @include desktop {
-    display: block; // transition: all 0.5s ease-in-out;
-  }
+    // opacity: 0;
+    margin: 0.2rem 0; // height: 0;
+    // overflow: hidden;
+    position: absolute; // animation: slideOutNavLabel 1s ease-in-out forwards; // transform: translateX(-50%);
+    left: -200px;
+    display: none;
+    transition: all 0.5s ease-in-out;
+    @include tablet {
+        display: block; // transition: all 0.5s ease-in-out;
+    }
+    @include desktop {
+        display: block; // transition: all 0.5s ease-in-out;
+    }
 }
-
-.navbar.open-nav {
-  .nav-label {
-    // left: -200%;
-  }
-}
-
-
-
-
-// @keyframes slideInNavLabel {
-//   0% {
-//     transform: translateX(100%);
-//     left: 100%;
-//     opacity: 0;
-//     visibility: hidden;
-//     // height: 0;
-//     overflow: hidden;
-//   }
-//   100% {
-//     transform: translateX(-50%);
-//     left: 50%;
-//     opacity: 1;
-//     visibility: visible;
-//     height: auto;
-//     overflow: auto;
-//   }
-// }
-// @keyframes slideOutNavLabel {
-//   0% {
-//     transform: translateX(-50%);
-//     left: 50%;
-//     opacity: 1;
-//     // visibility: visible;
-//     // height: auto;
-//   }
-//   100% {
-//     transform: translateX(100%);
-//     left: 100%;
-//     opacity: 0;
-//     visibility: hidden;
-//     height: 0;
-//   }
-// }

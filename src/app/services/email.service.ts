@@ -10,14 +10,13 @@ import { map, filter, switchMap, catchError } from 'rxjs/operators';
 })
 export class EmailService {
 
-  private emailUrl = 'http://localhost/email.php';
+  private emailUrl = 'https://zachbayoff.com/assets/email.php';
 
 
   constructor(private http: Http) {
   }
 
   sendEmail(message) {
-    console.log(message);
     return this.http.post(this.emailUrl, message).pipe(
       map((res) => {
         return res.json();

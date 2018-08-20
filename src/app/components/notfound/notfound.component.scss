@@ -1,0 +1,11 @@
+.notfound-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    h1 {
+        color: red;
+        font-size: 6rem;
+    }
+}

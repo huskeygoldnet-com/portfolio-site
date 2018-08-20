@@ -63,34 +63,6 @@
   }
 }
 
-//   // display: flex;
-//   // flex-direction: column;
-//   // justify-content: center;
-//   // align-items: center;
-//   // .project-link-url {
-//   //   order: 1;
-//   // }
-//   // img {
-//   //   order: 2;
-//   //   // width: 100%;
-//   // }
-//   @include desktop {
-//     .project-link-url {
-//       order: 2;
-//     }
-//     img {
-//       order: 1;
-//     }
-//   }
-//   @include tablet {
-//     .project-link-url {
-//       order: 1;
-//     }
-//     img {
-//       order: 2;
-//     }
-//   }
-// }
 .portfolio-item-main {
   .column-1 {
     width: 100%;
@@ -126,6 +98,8 @@
   display: flex;
   justify-content: center;
   margin: 4rem 0 4rem 0;
+  padding: 2rem 0 0 0;
+  border-top: 2px dotted black;
   a {
     text-decoration: none;
     color: black;

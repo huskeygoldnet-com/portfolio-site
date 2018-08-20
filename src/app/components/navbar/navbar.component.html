@@ -6,19 +6,19 @@
       </p>
     </div>
     <nav class="navbar" [ngClass]="{'open-nav' : toggle}">
-      <a (click)="hideNav()" routerLink="/">
+      <a (click)="hideNav()" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
         <img src="../../../assets/images/home.png">
         <p class="nav-label">Home</p>
       </a>
-      <a (click)="hideNav()" routerLink="/about">
+      <a (click)="hideNav()" routerLink="/about" routerLinkActive="active-link">
         <img src="../../../assets/images/avatar.png">
         <p class="nav-label">About</p>
       </a>
-      <a (click)="hideNav()" routerLink="/portfolio">
+      <a (click)="hideNav()" routerLink="/portfolio" routerLinkActive="active-link">
         <img src="../../../assets/images/briefcase.png">
         <p class="nav-label">Portfolio</p>
       </a>
-      <a (click)="hideNav()" routerLink="/contact">
+      <a (click)="hideNav()" routerLink="/contact" routerLinkActive="active-link">
         <img src="../../../assets/images/message.png">
         <p class="nav-label">Contact</p>
       </a>

@@ -4,7 +4,7 @@
   <a routerLink="/about">About</a>
 </nav> -->
 <app-navbar></app-navbar>
-<div class="routerContainer" >
-  <router-outlet ></router-outlet>
+<div class="route-container" [@fadeAnimation]="getState(o)" >
+  <router-outlet #o="outlet"></router-outlet>
 </div>
-<app-footer></app-footer>
+

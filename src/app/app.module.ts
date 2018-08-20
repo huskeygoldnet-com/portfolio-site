@@ -8,15 +8,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './routing/app-routing.module';
 import { AboutComponent } from './components/about/about.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PortfolioItemComponent } from './components/portfolio-item/portfolio-item.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
-import { TypingAnimationModule } from 'angular-typing-animation';
-
+import { TitleService } from './services/title.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { TypingAnimationModule } from 'angular-typing-animation';
     PortfolioComponent,
     ContactComponent,
     PortfolioItemComponent,
-    FooterComponent
+    FooterComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -35,10 +36,13 @@ import { TypingAnimationModule } from 'angular-typing-animation';
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    ReactiveFormsModule,
-    TypingAnimationModule
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [TitleService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(titleService: TitleService) {
+    titleService.init();
+  }
+}

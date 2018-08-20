@@ -1,18 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-import { portfolio_list } from '../../data/portfolio.model';
-
 import { Meta } from '@angular/platform-browser';
 
-
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  selector: 'app-notfound',
+  templateUrl: './notfound.component.html',
+  styleUrls: ['./notfound.component.scss']
 })
-export class PortfolioComponent implements OnInit {
-
-  portfolioList = portfolio_list;
+export class NotfoundComponent implements OnInit {
 
   constructor(private meta: Meta) {
     this.meta.addTags([

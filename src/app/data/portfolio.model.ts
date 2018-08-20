@@ -5,7 +5,7 @@ export const portfolio_list = [
         abs_url: 'https://circlebreak.com',
         short_desc: 'Conference networking website',
         completed_date: 'July 2018',
-        description: 'I developed a WordPress site for a a nascent startup that was in need of a landing page and eCommerce functionality in order to sell eTickets for their platform. I decided to use WordPress because it allowed me to deliver the site to the client quickly with a professional feel and eCommerce capabilities built in. \n\nThe site includes the WooCommerce plugin as well as a custom plugin and child-theme that I developed to allow me to write custom CSS and Javascript.',
+        description: 'I developed a WordPress site for a development team that was in need of a landing page and eCommerce functionality in order to sell eTickets for their concept networking platform. I decided to use WordPress because it allowed me to deliver the site to the client quickly with a professional feel and eCommerce capabilities built in. \n\nThe site includes the WooCommerce plugin as well as a custom plugin and child-theme that I developed to allow me to write custom CSS and Javascript.',
         technologies: ['WordPress', 'PHP', 'WooCommerce', 'Stripe', 'jQuery'],
         desc_img: '../assets/images/portfolio/circlebreak/project-desc-circlebreak.png',
         home_screenshots:
@@ -27,7 +27,7 @@ export const portfolio_list = [
         abs_url: 'https://roomies.zachbayoff.com/',
         short_desc: 'Roommate management and organization app',
         completed_date: 'March 2018',
-        description: 'Roomies is an application that lets roommates easily manage their chores, schedule visitors, and keep track of household purchases. Roommates are part of a "group" and may join several groups. Roomates can add their phone numbers to be automatically notified about chore dates, visitor arrivals, and household item\'s bills.',
+        description: 'Roomies is an application that lets roommates easily manage their chores, schedule visitors, and keep track of household purchases. Roommates are part of a "group" and may join several groups. Roommates can add their phone numbers to be automatically notified by phone about upcoming chore due dates, visitor arrivals, and household item\'s bills.',
         technologies: ['PHP', 'MySQL', 'jQuery', 'Bootstrap4', 'AJAX'],
         desc_img: '../assets/images/portfolio/roomies/project-desc-roomies.png',
         home_screenshots:
@@ -47,7 +47,7 @@ export const portfolio_list = [
         abs_url: 'https://zb-travel-app.herokuapp.com',
         short_desc: 'An app to organize your travel destinations and costs',
         completed_date: 'May 2018',
-        description: 'This web application was created for those who like to travel, but may not have an easy way to keep track of all of their desired destinations and associated expenses. With Travel App (pardon the lack of inticing app name), a user can create, update, and delete a "trip", filling in details such as the trip destination, travel dates, and list of costs one might incur while traveling. \n\nThis app also calls the Unsplash API that allows the user to find high resolution, beautiful photographs of just about anything, and could maybe help remind them of the beauties that their destinations hold. A MongoDB database was set up to store the users trips, meaning that anyone can access anyone\'s trips. This was implemented more on a proof-of-concept basis than an actual user authentication app. I may add this implementation in the future.',
+        description: 'This web application was created for those who like to travel, but may not have an easy way to keep track of all of their desired destinations and associated expenses. With Travel App, a user can create, update, and delete a "trip", filling in details such as the trip destination, travel dates, and list of costs one might incur while traveling. \n\nThis app also calls the Unsplash API that allows the user to find high resolution, beautiful photographs of just about anything, and could maybe help remind them of the beauties that their destinations hold. A MongoDB database was set up to store the users trips, meaning that anyone can access anyone\'s trips. This was implemented more on a proof-of-concept basis than an actual user authentication app. I may add this implementation in the future.',
         technologies: ['Angular 6', 'SASS', 'NodeJS', 'Express', 'MongoDB'],
         desc_img: '../assets/images/portfolio/travelapp/project-desc-travelapp.png',
         home_screenshots:
@@ -66,9 +66,9 @@ export const portfolio_list = [
         name: 'Weather App',
         route_url: 'weatherapp',
         abs_url: 'https://zb-weather-app.herokuapp.com',
-        short_desc: 'Get current weather data for any city/country in the world',
+        short_desc: 'Get current weather data for any world city/country',
         completed_date: 'May 2018',
-        description: 'Weather App is a simple, single page application that makes a call to the OpenWeatherMap API via a city/zip code and country combination. The weather data is retrieved via JSON and displayed with a high resolution background image to indicate the type of weather at the current time and place. The user can switch between Farenheit and Celcius. A Google Map is also embedded to indicate the latitude and longitude of the location the user has requested.',
+        description: 'Weather App is a simple, single page application that makes a call to the OpenWeatherMap API via a city/zip code and country combination. The weather data is retrieved via JSON and displayed with a high resolution background image to indicate the type of weather at the current time and place. The user can switch between Fahrenheit and Celcius. A Google Map is also embedded to indicate the latitude and longitude of the location the user has requested.',
         technologies: ['AngularJS', 'Webpack', 'Express', 'SASS'],
         desc_img: '../assets/images/portfolio/weatherapp/project-desc-weatherapp.png',
         home_screenshots:
@@ -82,22 +82,41 @@ export const portfolio_list = [
         ]
     },
     {
+        name: 'Portfolio Site',
+        route_url: 'portfoliosite',
+        abs_url: '',
+        short_desc: 'My portfolio site',
+        completed_date: 'August 2018',
+        description: 'As with any project, this site is bound to change and improve. After multiple iterations, I\'ve settled on using Angular to present my portfolio, as it allows me to add numerous projects by simply editing a JSON file rather than copying and pasting copius amounts of HTML and CSS.',
+        technologies: ['Angular 6', 'SASS'],
+        desc_img: '../assets/images/portfolio/portfolio-site/home-screenshot-laptop.png',
+        home_screenshots:
+        {
+            laptop: '../assets/images/portfolio/portfolio-site/home-screenshot-laptop.png',
+            ipad: '../assets/images/portfolio/portfolio-site/home-screenshot-ipad.png',
+            iphone: '../assets/images/portfolio/portfolio-site/home-screenshot-iphone.png'
+        },
+        other_screenshots: []
+    },
+    {
         name: 'The Bayground',
         route_url: 'bayground',
         abs_url: 'https://zbayoff.github.io/bayground/',
         short_desc: 'Mini javascript games and apps.',
         completed_date: 'January 2018',
         description: 'The Bayground is a collection of small, simple to complex applications. They range from finding a set of prime numbers to playing a game of concentration. This project was created to enhance javascript and programming skills. Namely, creating and using functions in different ways, writing loops, manipulating the DOM (without jQuery), adhering to ECMAScript 6 specifications, and much more.',
-        technologies: ['Vanilla Javascript'],
+        technologies: ['Vanilla Javascript, SASS'],
         desc_img: '../assets/images/portfolio/bayground/project-desc-bayground.png',
         home_screenshots:
         {
-            laptop: '../assets/images/portfolio/bayground/project-desc-bayground.png',
-            ipad: '../assets/images/portfolio/bayground/project-desc-bayground.png',
-            iphone: '../assets/images/portfolio/bayground/project-desc-bayground.png'
+            laptop: '../assets/images/portfolio/bayground/home-screenshot-laptop.png',
+            ipad: '../assets/images/portfolio/bayground/home-screenshot-ipad.png',
+            iphone: '../assets/images/portfolio/bayground/home-screenshot-iphone.png'
         },
         other_screenshots: [
-            '../assets/images/portfolio/bayground/project-desc-bayground.png'
+            '../assets/images/portfolio/bayground/concentration-module.png',
+            '../assets/images/portfolio/bayground/speedtyping-module.png',
+            '../assets/images/portfolio/bayground/prime-numbers-module.png'
         ]
     },
     {
