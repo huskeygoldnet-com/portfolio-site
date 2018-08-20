@@ -1,10 +1,3 @@
-<!-- <div class="container">
-    <main class="portfolio-main">
-      <h1>Portfolio-Item: {{portfolio_item.name}}</h1>
-     
-    </main>
-  </div> -->
-
 <div *ngIf="portfolio_item" class="container">
   <main class="portfolio-item-main">
     <div class="row hero-row">
@@ -23,19 +16,19 @@
         <section class="project-item_desktop-section">
           <div class="project-item_laptop-screenshot">
             <div class="project-item-main_img screenshot-macbook">
-              <img class="" src={{portfolio_item.home_screenshots.laptop}}>
+              <img src={{portfolio_item.home_screenshots.laptop}} [alt]="'Project: ' + portfolio_item.name + ' laptop screenshot'">
             </div>
           </div>
         </section>
         <section class="project-item_mobile-section">
           <div class="project-item_ipad-screenshot">
             <div class="project-item-main_img screenshot-ipad">
-              <img class="" src={{portfolio_item.home_screenshots.ipad}}>
+              <img src={{portfolio_item.home_screenshots.ipad}} [alt]="'Project: ' + portfolio_item.name + ' ipad screenshot'">
             </div>
           </div>
           <div class="project-item_iphone-screenshot">
             <div class="project-item-main_img screenshot-iphone">
-              <img class="" src={{portfolio_item.home_screenshots.iphone}}>
+              <img src={{portfolio_item.home_screenshots.iphone}} [alt]="'Project: ' + portfolio_item.name + ' iphone screenshot'">
             </div>
           </div>
         </section>
@@ -44,7 +37,7 @@
     <div class="row" *ngIf="portfolio_item.other_screenshots">
       <div class="column-1 portfolio-item-screenshots">
         <div class="portfolio-item-screenshot" *ngFor="let portfolio_item_screenshot of portfolio_item.other_screenshots">
-          <img src={{portfolio_item_screenshot}} alt="">
+          <img src={{portfolio_item_screenshot}} [alt]="'Project: ' + portfolio_item.name + ' additional screenshot'">
         </div>
       </div>
     </div>
@@ -52,20 +45,20 @@
       <div class="column-1 portfolio-item-projects-nav">
         <a class="portfolio-item-prev-project" routerLink="/portfolio/{{prev_portfolio_item.route_url}}">
           <div class="portfolio-item-prev-img">
-            <img src={{prev_portfolio_item.desc_img}}>
+            <img src={{prev_portfolio_item.desc_img}} alt="Previous project image">
           </div>
           <div class="portfolio-item-prev">
             Previous <br> Project
-            <img src="../../../assets/images/back-arrow.png">
+            <img src="../../../assets/images/back-arrow.png" alt="previous arrow icon">
           </div>
         </a>
         <a class="portfolio-item-next-project" routerLink="/portfolio/{{next_portfolio_item.route_url}}">
           <div class="portfolio-item-next-img">
-            <img src={{next_portfolio_item.desc_img}}>
+            <img src={{next_portfolio_item.desc_img}} alt="Next project image">
           </div>
           <div class="portfolio-item-next">
             Next <br> Project
-            <img src="../../../assets/images/forward-arrow.png">
+            <img src="../../../assets/images/forward-arrow.png" alt="forward arrow icon">
           </div>
         </a>
       </div>

@@ -7,19 +7,19 @@
     </div>
     <nav class="navbar" [ngClass]="{'open-nav' : toggle}">
       <a (click)="hideNav()" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
-        <img src="../../../assets/images/home.png">
+        <img src="../../../assets/images/home.png" alt="home icon">
         <p class="nav-label">Home</p>
       </a>
       <a (click)="hideNav()" routerLink="/about" routerLinkActive="active-link">
-        <img src="../../../assets/images/avatar.png">
+        <img src="../../../assets/images/avatar.png" alt="profile icon">
         <p class="nav-label">About</p>
       </a>
       <a (click)="hideNav()" routerLink="/portfolio" routerLinkActive="active-link">
-        <img src="../../../assets/images/briefcase.png">
+        <img src="../../../assets/images/briefcase.png" alt="briefcase icon">
         <p class="nav-label">Portfolio</p>
       </a>
       <a (click)="hideNav()" routerLink="/contact" routerLinkActive="active-link">
-        <img src="../../../assets/images/message.png">
+        <img src="../../../assets/images/message.png" alt="mail icon">
         <p class="nav-label">Contact</p>
       </a>
     </nav>

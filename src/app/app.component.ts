@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { fadeAnimation } from './animations/animation';
-import { RouterOutlet, UrlSegment } from '@angular/router';
+import { Router, RouterOutlet, UrlSegment, NavigationEnd } from '@angular/router';
 // import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,6 +10,15 @@ import { RouterOutlet, UrlSegment } from '@angular/router';
   animations: [fadeAnimation]
 })
 export class AppComponent {
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        (<any>window).ga('set', 'page', event.urlAfterRedirects);
+        (<any>window).ga('send', 'pageview');
+      }
+    });
+  }
 
   getState(outlet: RouterOutlet) {
 
