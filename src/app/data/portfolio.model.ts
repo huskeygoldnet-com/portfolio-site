@@ -63,6 +63,29 @@ export const portfolio_list = [
         ]
     },
     {
+        name: 'The Bayground',
+        route_url: 'bayground',
+        abs_url: 'https://zbayoff.github.io/bayground/',
+        short_desc: 'Mini javascript games and apps.',
+        completed_date: 'January 2018',
+        description: 'The Bayground is a collection of small, simple to complex applications. They range from finding a set of prime numbers to playing a game of concentration. This project was created to enhance javascript and programming skills. Namely, creating and using functions in different ways, writing loops, manipulating the DOM (without jQuery), adhering to ECMAScript 6 specifications, and much more.',
+        technologies: ['Vanilla Javascript, SASS, Webpack 4, Babel, svg.js'],
+        desc_img: '../assets/images/portfolio/bayground/project-desc-bayground.png',
+        home_screenshots:
+        {
+            laptop: '../assets/images/portfolio/bayground/home-screenshot-laptop.png',
+            ipad: '../assets/images/portfolio/bayground/home-screenshot-ipad.png',
+            iphone: '../assets/images/portfolio/bayground/home-screenshot-iphone.png'
+        },
+        other_screenshots: [
+            '../assets/images/portfolio/bayground/concentration-module.png',
+            '../assets/images/portfolio/bayground/speedtyping-module.png',
+            '../assets/images/portfolio/bayground/hangman-module.png',
+            '../assets/images/portfolio/bayground/calculator-module.png',
+            '../assets/images/portfolio/bayground/prime-numbers-module.png'
+        ]
+    },
+    {
         name: 'Weather App',
         route_url: 'weatherapp',
         abs_url: 'https://zb-weather-app.herokuapp.com',
@@ -97,27 +120,6 @@ export const portfolio_list = [
             iphone: '../assets/images/portfolio/portfolio-site/home-screenshot-iphone.png'
         },
         other_screenshots: []
-    },
-    {
-        name: 'The Bayground',
-        route_url: 'bayground',
-        abs_url: 'https://zbayoff.github.io/bayground/',
-        short_desc: 'Mini javascript games and apps.',
-        completed_date: 'January 2018',
-        description: 'The Bayground is a collection of small, simple to complex applications. They range from finding a set of prime numbers to playing a game of concentration. This project was created to enhance javascript and programming skills. Namely, creating and using functions in different ways, writing loops, manipulating the DOM (without jQuery), adhering to ECMAScript 6 specifications, and much more.',
-        technologies: ['Vanilla Javascript, SASS'],
-        desc_img: '../assets/images/portfolio/bayground/project-desc-bayground.png',
-        home_screenshots:
-        {
-            laptop: '../assets/images/portfolio/bayground/home-screenshot-laptop.png',
-            ipad: '../assets/images/portfolio/bayground/home-screenshot-ipad.png',
-            iphone: '../assets/images/portfolio/bayground/home-screenshot-iphone.png'
-        },
-        other_screenshots: [
-            '../assets/images/portfolio/bayground/concentration-module.png',
-            '../assets/images/portfolio/bayground/speedtyping-module.png',
-            '../assets/images/portfolio/bayground/prime-numbers-module.png'
-        ]
     },
     {
         name: 'New York Junior Tennis League',
