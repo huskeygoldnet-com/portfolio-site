@@ -5,7 +5,7 @@ export const portfolio_list = [
         abs_url: 'https://circlebreak.com',
         short_desc: 'Conference networking website',
         completed_date: 'July 2018',
-        description: 'I developed a WordPress site for a development team that was in need of a landing page and eCommerce functionality in order to sell eTickets for their concept networking platform. I decided to use WordPress because it allowed me to deliver the site to the client quickly with a professional feel and eCommerce capabilities built in. \n\nThe site includes the WooCommerce plugin as well as a custom plugin and child-theme that I developed to allow me to write custom CSS and Javascript.',
+        description: 'I developed a WordPress site for a development team that was in need of a landing page and eCommerce functionality in order to sell eTickets for their concept networking platform. I decided to use WordPress because it allowed me to deliver the site to the client quickly with a professional feel and eCommerce capabilities built in. \n\nThe site includes the WooCommerce plugin as well as a custom plugin and child-theme that I developed to allow me to write custom CSS and JavaScript.',
         technologies: ['WordPress', 'PHP', 'WooCommerce', 'Stripe', 'jQuery'],
         desc_img: '../assets/images/portfolio/circlebreak/project-desc-circlebreak.png',
         home_screenshots:
@@ -66,10 +66,10 @@ export const portfolio_list = [
         name: 'The Bayground',
         route_url: 'bayground',
         abs_url: 'https://zbayoff.github.io/bayground/',
-        short_desc: 'Mini javascript games and apps.',
+        short_desc: 'Mini JavaScript games and apps',
         completed_date: 'January 2018',
-        description: 'The Bayground is a collection of small, simple to complex applications. They range from finding a set of prime numbers to playing a game of concentration. This project was created to enhance javascript and programming skills. Namely, creating and using functions in different ways, writing loops, manipulating the DOM (without jQuery), adhering to ECMAScript 6 specifications, and much more.',
-        technologies: ['Vanilla Javascript, SASS, Webpack 4, Babel, svg.js'],
+        description: 'The Bayground is a collection of small, simple to complex applications. They range from finding a set of prime numbers to playing a game of concentration. This project was created to enhance JavaScript and programming skills. Namely, creating and using functions in different ways, writing loops, manipulating the DOM (without jQuery), adhering to ECMAScript 6 specifications, and much more.',
+        technologies: ['Vanilla JavaScript (ES6)', 'SASS', 'Webpack 4', 'Babel', 'svg.js'],
         desc_img: '../assets/images/portfolio/bayground/project-desc-bayground.png',
         home_screenshots:
         {
@@ -128,7 +128,7 @@ export const portfolio_list = [
         short_desc: 'Redesign concept for existing NYJTL website.',
         completed_date: 'November 2017',
         description: 'I chose to build this project out of my love for tennis (it was also a midterm project for my CUNY City Tech Course). This project was built by using content from NYJTL and creating a new look and feel. Using Bootstrap4, the site includes many modern features that makes Bootstrap so easy to use as a front-end framework: Carousels, modals, accordians, hamburger menu, etc. Many of the links do not work, as this is more of a concept site. The donation page is set up, though, and functions like a typical donation system would work.',
-        technologies: ['Bootstrap4', 'Javascript'],
+        technologies: ['Bootstrap4', 'JavaScript'],
         desc_img: '../assets/images/portfolio/nyjtl/project-desc-nyjtl.png',
         home_screenshots:
         {

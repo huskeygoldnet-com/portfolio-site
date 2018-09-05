@@ -1,7 +1,7 @@
 @import './src/sass/variables';
 @import './src/sass/mixins';
 .contact-main {
-    height: 100vh;
+    min-height: 100vh;
     .column-1 {
         max-width: 1000px;
     }
