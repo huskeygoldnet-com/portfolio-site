@@ -1,24 +1,22 @@
 @import './src/sass/variables';
 @import './src/sass/mixins';
-
 .home-main {
-    height: 100vh;
+    height: calc(100vh - 95px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    .site-title {
-        // font-size: 4rem;
-        // margin: 0.5rem;
-    }
-    .site-subtitle {
-
-    }
+    margin-top: 95px;
     button {
         display: inline-block;
-        // background-color: #57467B;
-        // padding: 0.8rem;
-        // color: white;
+    }
+    @include tablet {
+        height: calc(100vh - 119px);
+        margin-top: 0;
+    }
+    @include desktop {
+        height: calc(100vh - 119px);
+        margin-top: 0;
     }
 }
 

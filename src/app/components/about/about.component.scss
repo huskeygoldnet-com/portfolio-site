@@ -47,7 +47,7 @@ h2 {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 3rem auto;
   @include desktop {
     flex-direction: row;
     align-items: center;
@@ -140,7 +140,7 @@ h2 {
 .about-current-work,
 .skills-container,
 .interest-block {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 @keyframes animateFlags {
