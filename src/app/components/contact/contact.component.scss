@@ -1,204 +1,257 @@
 @import './src/sass/variables';
 @import './src/sass/mixins';
+
 .contact-main {
-    min-height: 100vh;
-    .column-1 {
-        max-width: 1000px;
-    }
-    h1 {
-        text-align: center;
-        margin: 2rem 0;
-        @include desktop {
-            margin: 4rem 0;
-        }
-        @include tablet {
-            margin: 4rem 0;
-        }
-    }
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 95px;
+
+  button {
+    display: inline-block;
+  }
+
+  @include tablet {
+    min-height: calc(100vh - 140px);
+    margin-top: 0;
+  }
+
+  @include desktop {
+    min-height: calc(100vh - 140px);
+    margin-top: 0;
+  }
+
+  // min-height: 100vh;
+  // .column-1 {
+  //     max-width: 1000px;
+  // }
+  // h1 {
+  //     text-align: center;
+  //     margin: 2rem 0;
+  //     @include desktop {
+  //         margin: 4rem 0;
+  //     }
+  //     @include tablet {
+  //         margin: 4rem 0;
+  //     }
+  // }
 }
 
 .contact-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact-block-1 {
+    order: 1;
+
     @include desktop {
-        flex-direction: row;
-        align-items: center;
+      order: 1;
     }
+
     @include tablet {
-        flex-direction: row;
-        align-items: center;
+      order: 1;
     }
-    .contact-block-1 {
-        order: 1;
-        @include desktop {
-            order: 1;
-        }
-        @include tablet {
-            order: 1;
-        }
+  }
+
+  .contact-block-2 {
+    order: 2;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    img {
+      width: 50px;
+      margin: 1rem 0.5rem;
+
+      @include desktop {
+        margin: 0.2rem 0.5rem;
+      }
+
+      @include tablet {
+        margin: 0.2rem 0.5rem;
+      }
     }
-    .contact-block-2 {
-        order: 2;
-        flex: 1 0 auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        img {
-            width: 50px;
-            margin: 1rem 0.5rem;
-            @include desktop {
-                margin: 0.2rem 0.5rem;
-            }
-            @include tablet {
-                margin: 0.2rem 0.5rem;
-            }
-        }
-        @include desktop {
-            order: 1;
-            text-align: center; // flex-direction: column;
-        }
-        @include tablet {
-            order: 1;
-            text-align: center; // flex-direction: column;
-        }
+
+    @include desktop {
+      order: 1;
+      text-align: center; // flex-direction: column;
     }
+
+    @include tablet {
+      order: 1;
+      text-align: center; // flex-direction: column;
+    }
+  }
 }
 
 .contact-location,
 .contact-email {
-    .contact-icon {
-        display: inline-block;
-        vertical-align: middle;
-        width: 30px;
-        margin: 0 0.5rem 0 0;
-    }
-    p {
-        display: inline-block;
-        vertical-align: middle;
-    }
+  .contact-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    margin: 0 0.5rem 0 0;
+  }
+
+  p {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 form {
-    margin: 2rem 0;
-    .form-group {
-        margin-bottom: 0.5rem;
-    }
-    input,
-    textarea {
-        width: 100%;
-        background-color: transparent;
-        border: none;
-        border-bottom: 2px solid #303030
-    }
-    input {
-        height: 2.5rem;
-    }
-    textarea {
-        height: 10rem;
-    }
-    input:focus,
-    textarea:focus {
-        outline: none;
-        border: none;
-        border-bottom: 2px solid $accent-color;
-    }
-    input::placeholder,
-    textarea::placeholder {
-        color: #303030
-    }
+  margin: 2rem 0;
+
+  .form-group {
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #303030
+  }
+
+  input {
+    height: 2.5rem;
+  }
+
+  textarea {
+    height: 10rem;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid $accent-color;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #303030
+  }
 }
 
 form input:-webkit-autofill,
 form textarea:-webkit-autofill,
 form select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px $primary-color inset;
-    box-shadow: 0 0 0 1000px $primary-color inset;
+  -webkit-box-shadow: 0 0 0 1000px $primary-color inset;
+  box-shadow: 0 0 0 1000px $primary-color inset;
 }
 
 .msg-block {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  .message-msg {
+    margin: 0;
+  }
+
+  @include mobile {
+    flex-direction: row;
+    align-items: center;
+
     .message-msg {
-        margin: 0;
+      display: inline-block;
+      margin-left: 1rem;
+      white-space: pre-line;
     }
-    @include mobile {
-        flex-direction: row;
-        align-items: center;
-        .message-msg {
-            display: inline-block;
-            margin-left: 1rem;
-            white-space: pre-line;
-        }
+  }
+
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+
+    .message-msg {
+      display: inline-block;
+      margin-left: 1rem;
+      white-space: pre-line;
     }
-    @include desktop {
-        flex-direction: row;
-        align-items: center;
-        .message-msg {
-            display: inline-block;
-            margin-left: 1rem;
-            white-space: pre-line;
-        }
+  }
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+
+    .message-msg {
+      display: inline-block;
+      margin-left: 1rem;
+      white-space: pre-line;
     }
-    @include tablet {
-        flex-direction: row;
-        align-items: center;
-        .message-msg {
-            display: inline-block;
-            margin-left: 1rem;
-            white-space: pre-line;
-        }
+  }
+
+  .button-link {
+    flex: none;
+
+    &:disabled {
+      color: white;
+      cursor: not-allowed;
+      background-color: grey;
+      transition: none !important;
+
+      .button-link__arrow {
+        display: none;
+      }
+
+      &:hover {
+        transition: none !important;
+        padding: 0.75rem 1rem;
+      }
     }
-    .button-link {
-        flex: none;
-        &:disabled {
-            color: white;
-            cursor: not-allowed;
-            background-color: grey;
-            transition: none !important;
-            .button-link__arrow {
-                display: none;
-            }
-            &:hover {
-                transition: none !important;
-                padding: 0.75rem 1rem;
-            }
-        }
-    }
+  }
 }
 
 .success-msg {
-    color: #59CD90;
+  color: #59CD90;
 }
 
 .fail-msg {
-    color: red;
+  color: red;
 }
 
 .sending span {
-    animation-name: blink;
-    animation-duration: 1.4s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
+  animation-name: blink;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
 }
 
 .sending span:nth-child(2) {
-    animation-delay: .2s;
+  animation-delay: .2s;
 }
 
 .sending span:nth-child(3) {
-    animation-delay: .4s;
+  animation-delay: .4s;
 }
 
 @keyframes blink {
-    0% {
-        opacity: .2;
-    }
-    20% {
-        opacity: 1;
-    }
-    100% {
-        opacity: .2;
-    }
+  0% {
+    opacity: .2;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .2;
+  }
 }

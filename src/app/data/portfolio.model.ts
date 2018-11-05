@@ -1,5 +1,28 @@
 export const portfolio_list = [
     {
+        name: 'Millennials Are Over It',
+        route_url: 'millennialsareoverit',
+        abs_url: 'https://www.millennialsareoverit.com',
+        short_desc: 'Twitter Feed and Organization Website',
+        completed_date: 'November 2018',
+        description: 'This web application was built for the organization Millennials Are Over It, which helps to mobilize young voters and promote youth engagement in U.S. elections. The purpose of the app is two-fold: 1) A basic website to provide information about the organization and show how young voters can get involved and 2) A social feed that displays and stores recent tweets from users across the U.S., based on broad issues involving Americans today.\n\n The goal is for the organization to conduct research about how and why young people vote. The app uses the publically available Twitter API to search tweets and display them in the app feed. A Mongo Database was set up in order to store these tweets and the search paramters used to find them.\n\n Angular 6 was used on the front-end with Node/Express/Mongo on the back-end.',
+        technologies: ['Angular 6', 'Node/Express', 'MongoDB'],
+        desc_img: '../assets/images/portfolio/millennialsareoverit/project-desc-millennialsareoverit.png',
+        home_screenshots:
+        {
+            laptop: '../assets/images/portfolio/millennialsareoverit/home-screenshot-laptop.png',
+            ipad: '../assets/images/portfolio/millennialsareoverit/home-screenshot-ipad.png',
+            iphone: '../assets/images/portfolio/millennialsareoverit/home-screenshot-iphone.png'
+        },
+        other_screenshots: [
+            '../assets/images/portfolio/millennialsareoverit/home-home.png',
+            '../assets/images/portfolio/millennialsareoverit/home-us.png',
+            '../assets/images/portfolio/millennialsareoverit/home-theplan.png',
+            '../assets/images/portfolio/millennialsareoverit/home-mobilize.png',
+            '../assets/images/portfolio/millennialsareoverit/home-contact.png',
+        ]
+    },
+    {
         name: 'circlebreak',
         route_url: 'circlebreak',
         abs_url: 'https://circlebreak.com',
